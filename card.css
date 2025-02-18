@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+.From {
+    text-align: left;
+}
+
 .envelope {
     width: 80%;
     height: 60%;
@@ -27,6 +31,9 @@ body {
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    height: 90%;
+    width: 75%;
+    align-self: center;
 }
 
 .card {
