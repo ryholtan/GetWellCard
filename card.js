@@ -3,20 +3,24 @@ document.getElementById("envelope").addEventListener("click", function () {
     setTimeout(() => {
         document.getElementById("cardContainer").style.opacity = "1";
     }, 500);
+    this.style.zIndex = "-10";
 });
+
+document.getElementById("card").classList.toggle("closed");
+if (document.getElementById("card").classList.toggle("closed")) {
+    this.style.width = "30%";
+}
 
 document.getElementById("card").addEventListener("click", function () {
     const cardFront = document.querySelector(".card-front");
     const cardInner = document.querySelector(".card-inner");
 
     if (this.classList.contains("closed")) {
-        // Close the card: show the front and hide the inner
-        this.style.transform = "rotateY(0deg)";
+        this.style.width = "30%";
         cardFront.style.display = "flex"; // Ensure the front is visible
         cardInner.style.display = "none"; // Hide the inner side
     } else {
-        // Open the card: hide the front and show the inner
-        this.style.transform = "rotateY(180deg)";
+        this.style.width = "60%";
         cardFront.style.display = "none"; // Hide the front
         cardInner.style.display = "flex"; // Show the inner side
     }
