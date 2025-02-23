@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -73,11 +75,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     cursor: pointer;
-    background: #ffefd5;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: url('images/backGround.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    color: rgb(6, 3, 3);
+    
+}
+
+.card-front h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    /* Keeps background limited to text */
+    background: rgba(135, 59, 59, 0.6);
+    /* Dark semi-transparent background */
+    color: white;
+    /* Ensures readability */
+    padding: 5px 10px;
+    /* Adds spacing around text */
+    border-radius: 5px;
+    /* Rounds the edges */
 }
 
 .card-inner {
