@@ -15,12 +15,23 @@ document.getElementById("card").addEventListener("click", function () {
     const cardFront = document.querySelector(".card-front");
     const cardInner = document.querySelector(".card-inner");
 
+
+    let windowWidth = window.innerWidth;
+
     if (this.classList.contains("closed")) {
-        this.style.width = "30%";
+        
         cardFront.style.display = "flex"; // Ensure the front is visible
         cardInner.style.display = "none"; // Hide the inner side
+        if (windowWidth < 750) {
+            this.style.width = "100%";
+            this.style.height = "100%";
+
+            cardFront.style.fontsize = "24px";
+            cardFront.style.padding = "2px 6px";
+        }else {
+            this.style.width = "30%";
+        }
     } else {
-        this.style.width = "60%";
         cardFront.style.display = "none"; // Hide the front
         cardInner.style.display = "flex"; // Show the inner side
     }
@@ -28,20 +39,3 @@ document.getElementById("card").addEventListener("click", function () {
 });
 
 
-// document.getElementById("card").addEventListener("click", function () {
-//     const cardFront = document.querySelector(".card-front");
-//     const cardInner = document.querySelector(".card-inner");
-
-//     if (this.classList.contains("open")) {
-//         // Close the card: show the front and hide the inner
-//         this.style.transform = "rotateY(0deg)";
-//         cardFront.style.display = "flex"; // Show the front side
-//         cardInner.style.display = "none"; // Hide the inner side
-//     } else {
-//         // Open the card: show the inner side and hide the front
-//         this.style.transform = "rotateY(180deg)";
-//         cardFront.style.display = "none"; // Hide the front side
-//         cardInner.style.display = "flex"; // Show the inner side
-//     }
-//     this.classList.toggle("open");
-// });
