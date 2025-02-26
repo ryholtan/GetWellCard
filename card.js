@@ -6,7 +6,7 @@ document.getElementById("envelope").addEventListener("click", function () {
     this.style.zIndex = "-10";
 });
 
-document.getElementById("card").classList.toggle("closed");
+document.getElementById("card").classList.add("closed");
 if (document.getElementById("card").classList.toggle("closed")) {
     this.style.width = "30%";
 }
